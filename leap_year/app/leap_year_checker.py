@@ -20,4 +20,4 @@ print(LeapYearChecker(int(sys.argv[1])).is_a_leap_year())
 
     
 # Write a program to accept a year from the user and check whether it is a leap year.
-# _Hint: If a year is divisible by 4 and not divisible by 100  or if the year is divisible by 400_
+# _Hint: If a year is divisible by 4 and not divisible by 100  or if the year is divisible by 400
