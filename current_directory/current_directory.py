@@ -2,7 +2,7 @@
 import os
 
 class CurrentDirPrinter:
-    @staticmethod
+    @staticmethod # only needs adding when want to call from instance as well as class
     def printDir():
         cwd = os.getcwd()
         print(cwd)
