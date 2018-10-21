@@ -2,7 +2,13 @@
 import os
 
 class CurrentDirPrinter:
-
-    def printDir(self):
+    @staticmethod
+    def printDir():
         cwd = os.getcwd()
         print(cwd)
+
+def main():
+    cwd = CurrentDirPrinter.printDir()
+
+if __name__ == "__main__":
+	main()
