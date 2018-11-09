@@ -7,6 +7,6 @@ class CreateFile():
     
     def create_file(self):
         if os.path.exists(self.file_path): 
-            return True 
+            open(self.file_path + "/" + self.file_name, "wb")
         else: 
             os.makedirs(self.file_path)

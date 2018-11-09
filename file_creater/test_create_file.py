@@ -8,7 +8,6 @@ class CreateFileTest(unittest.TestCase):
         file_name = 'fun_test.txt'
         self.createFile = CreateFile(file_path, file_name)
     
-
     def test_it_has_directory_path_and_file_name(self):
         self.assertEqual(self.createFile.file_path, "/Users/leighann.gant/Projects/code_challenge")
         self.assertEqual(self.createFile.file_name, 'fun_test.txt')
@@ -29,6 +28,10 @@ class CreateFileTest(unittest.TestCase):
     def test_if_path_does_exist_dir_not_created(self, mock_os, mock_create_dir):
         self.createFile.create_file()
         self.assertFalse(mock_create_dir.called)
-
-
+    
+    @unittest.mock.patch('os.path.exists', return_value = False)
+    @unittest.mock.patch('open')
+    def test_if_path_does_exist_new_file_created(self, mock_os, mock_open):
+        self.createFile.create_file()
+        self.assertTrue(mock_open.called)
 
