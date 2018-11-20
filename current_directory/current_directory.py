@@ -8,7 +8,7 @@ class CurrentDirPrinter:
         print(cwd)
 
 def main():
-    cwd = CurrentDirPrinter.printDir()
+    CurrentDirPrinter.printDir()
 
 if __name__ == "__main__":
 	main()
