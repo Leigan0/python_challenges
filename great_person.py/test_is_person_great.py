@@ -1,3 +1,3 @@
 def test_is_person_great():
-    p = 'mike'
+    p = 'Leigh'
     assert is_person_great(p) == "great"
